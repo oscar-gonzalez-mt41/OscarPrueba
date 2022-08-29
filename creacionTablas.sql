@@ -80,6 +80,11 @@ INSERT INTO inventario(id_producto, cantidad) VALUES(10, 5);
 
 -- Insercion de datos tabla factura
 INSERT INTO factura(id_cliente, fecha_compra) VALUES(1,'2022-08-10');
+INSERT INTO factura(id_cliente, fecha_compra) VALUES(1,'2022-07-08');
+INSERT INTO factura(id_cliente, fecha_compra) VALUES(1,'2022-04-02');
+INSERT INTO factura(id_cliente, fecha_compra) VALUES(1,'2022-01-12');
+INSERT INTO factura(id_cliente, fecha_compra) VALUES(1,'2022-10-03');
+
 INSERT INTO factura(id_cliente, fecha_compra) VALUES(2,'2000-02-01');
 INSERT INTO factura(id_cliente, fecha_compra) VALUES(3,'2000-04-15');
 INSERT INTO factura(id_cliente, fecha_compra) VALUES(4,'2000-05-20');
@@ -99,6 +104,7 @@ INSERT INTO factura_producto (id_factura, id_producto ,cantidad) VALUES(2, 3, 1)
 INSERT INTO factura_producto (id_factura, id_producto ,cantidad) VALUES(2, 4, 1);
 INSERT INTO factura_producto (id_factura, id_producto ,cantidad) VALUES(2, 5, 1);
 INSERT INTO factura_producto (id_factura, id_producto ,cantidad) VALUES(2, 6, 1);
+INSERT INTO factura_producto (id_factura, id_producto ,cantidad) VALUES(2, 7, 1);
 
 INSERT INTO factura_producto (id_factura, id_producto ,cantidad) VALUES(3, 1, 1);
 INSERT INTO factura_producto (id_factura, id_producto ,cantidad) VALUES(3, 2, 1);

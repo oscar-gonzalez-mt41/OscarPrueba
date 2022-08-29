@@ -13,3 +13,20 @@ SELECT * FROM cliente
 INNER JOIN factura
 ON cliente.id_cliente = factura.id_cliente
 WHERE cliente.edad <= 35 AND (factura.fecha_compra BETWEEN '2000-02-01' AND '2000-05-25');
+
+--Obtener el valor total vendido por cada producto en el año 2000
+SELECT producto.nombre , SUM(producto.precio) AS total_ano_producto FROM factura
+INNER JOIN factura_producto 
+ON factura.id_factura = factura_producto.id_factura
+INNER JOIN producto
+ON factura_producto.id_producto = producto.id_producto
+WHERE YEAR(factura.fecha_compra) = 2000
+GROUP BY  producto.nombre;
+
+--Obtener la última fecha de compra de un cliente y según su frecuencia de compra estimar en qué fecha podría volver a comprar.
+
+SELECT TOP 1 DATEADD(day,30,factura.fecha_compra) FROM cliente
+INNER JOIN factura
+ON cliente.id_cliente = factura.id_cliente
+WHERE cliente.id_cliente = 1
+ORDER BY factura.fecha_compra DESC
